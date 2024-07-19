@@ -1,0 +1,399 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: "work sans", sans-serif;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.special-heading {
+  color: #ebeced;
+  font-size: 100px;
+  text-align: center;
+  letter-spacing: -2px;
+  font-weight: 800;
+  margin: 0;
+}
+.special-heading + p {
+  margin: -30px 0 0;
+  font-size: 20px;
+  text-align: center;
+  color: #797979;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* Start Header*/
+i {
+  font-size: 25px;
+}
+.header img {
+  width: 70px;
+}
+.header .container {
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.header .links ul {
+  list-style: none;
+  background-color: #f6f6f6;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 2px);
+  min-width: 200px;
+  padding-bottom: 10px;
+  z-index: 1;
+  display: none;
+}
+.header .links ul::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #f6f6f6 transparent;
+  position: absolute;
+  right: 5px;
+  top: -19px;
+}
+.header .links:hover ul {
+  display: block;
+}
+.header .links ul li a {
+  text-decoration: none;
+  display: block;
+  color: #222;
+  padding: 15px;
+  transition: 0.3s;
+}
+.header .links ul li:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+.header .links ul li a:hover {
+  padding-left: 25px;
+}
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* Start Landing*/
+.landing {
+  background-image: url(/images/landing.jpg);
+  background-size: cover;
+  height: calc(100vh - 58px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landing .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing .container .intro-text h1 {
+  margin: 0;
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  color: #10cab7;
+}
+.landing .container .intro-text p {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 1.8px;
+  text-align: center;
+}
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* Start features*/
+.features {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #f6f6f6;
+}
+
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.features .container .feat {
+  padding: 20px;
+  text-align: center;
+}
+
+.features .container .feat i {
+  color: #10cab7;
+}
+
+.features .container .feat p {
+  line-height: 1.8;
+  font-size: 17px;
+  color: #777;
+}
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* Start Services*/
+.services {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.services .container .services-content {
+  padding-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  column-gap: 30px;
+}
+.services .container .services-content .serv {
+  padding: 10px;
+}
+@media (max-width: 768px) {
+  .services .container .services-content .serv {
+    text-align: center;
+  }
+}
+.services .container .services-content .col {
+  margin-left: auto;
+  margin-right: auto;
+}
+.services .container .services-content .serv + p {
+  line-height: 1.8;
+  font-size: 17px;
+  color: #777;
+}
+.services .container .services-content .image img {
+  width: 250px;
+  height: 350px;
+}
+.services .container .services-content .image {
+  position: relative;
+}
+.services .container .services-content .image::before {
+  content: "";
+  width: 100px;
+  height: 450px;
+  background-color: #2c4755;
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  z-index: -1;
+}
+@media (max-width: 768px) {
+  .services .container .services-content .image {
+    display: none;
+  }
+}
+@media (max-width: 1199px) {
+  .services .container .services-content .image {
+    display: none;
+  }
+}
+.services .container .services-content .serv i {
+  color: #10cab7;
+}
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* Start Portfolio*/
+.portfolio {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #f6f6f6;
+}
+
+.portfolio .container .portfolio-content {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  column-gap: 30px;
+}
+
+.portfolio .container .portfolio-content .card .image {
+  height: 250px;
+  overflow: hidden;
+}
+
+.portfolio .container .portfolio-content .card .text {
+  background-color: white;
+  color: #777;
+  padding: 10px;
+}
+.portfolio .container .portfolio-content .card .text h3 {
+  margin: 0;
+  color: black;
+}
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* Start About*/
+.about {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background-color: white;
+}
+.about .container {
+}
+.about .container .about-content {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  column-gap: 150px;
+  align-items: center;
+}
+.about .container .about-content .text p {
+  font-size: 17px;
+  line-height: 2;
+}
+.about .container .about-content .text hr {
+  background-color: #10cab7;
+  display: inline-block;
+  height: 1px;
+  width: 50%;
+}
+.about .container .about-content .text p:nth-child(1) {
+  margin: 16px 0 50px;
+  font-weight: 700;
+}
+.about .container .about-content .text p:nth-of-type(2) {
+  margin-top: 25px;
+  color: #777;
+}
+
+.about .container .about-content .image {
+  position: relative;
+  width: 250px;
+  height: 375px;
+}
+.about .container .about-content .image img {
+  max-width: 100%;
+  z-index: 3;
+  position: relative;
+}
+.about .container .about-content .image::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 450px;
+  background-color: #ccc;
+  top: -50px;
+  left: -50px;
+  z-index: 2;
+}
+.about .container .about-content .image::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 290px;
+  background-color: white;
+  top: -50px;
+  right: -131px;
+  z-index: 2;
+  border-left: 100px solid #10cab7;
+  border-bottom: 100px solid #10cab7;
+}
+@media (max-width: 992px) {
+  .about .container .about-content .text {
+    margin-top: 100px;
+    text-align: center;
+  }
+  .about .container .about-content .image {
+    justify-self: center;
+  }
+}
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* Start Contact*/
+.contact {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #f6f6f6;
+}
+.contact .container .contact-content {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+.contact .container .contact-content p:nth-of-type(1) {
+  margin-bottom: 20px;
+  font-size: 35px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  color: #2c4755;
+}
+.contact .container .contact-content p:nth-of-type(2) {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 35px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  color: #10cab7;
+}
+.contact .container .contact-content :nth-child(3) {
+  font-size: 18px;
+}
+.contact .container .contact-content i {
+  color: #2c4755;
+  margin-left: 5px;
+}
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* Start footer*/
+.footer {
+  background-color: #2c4755;
+  padding: 20px;
+  text-align: center;
+}
+.footer p {
+  color: white;
+  font-size: 18px;
+}
+.footer span {
+  color: #10cab7;
+  font-weight: bold;
+}
